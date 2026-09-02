@@ -18,16 +18,16 @@
 
 Unlike most converters that simply act as wrappers around `subprocess.run(["ffmpeg"])`, Mooper interfaces directly with `libavcodec` and `libavformat` natively in Python memory via [PyAV](https://pyav.org). This guarantees blazing fast performance, cross-platform compatibility, and an incredibly low resource footprint.
 
-## ✨ Features
+## Features
 
-- 🪄 **Interactive UI**: Just point it at a file or folder. Mooper detects the media type and provides a beautiful interactive menu for conversion targets.
-- 🧠 **Intelligent Batch Processing**: Point it at a folder to automatically categorize, group, and convert mixed media files into organized subfolders.
-- 📱 **Mobile VFR Support**: Advanced two-pass video engine specifically handles Variable Frame Rate (VFR) iPhone and Android footage without green frames or audio desync.
-- ⚡ **Remux-First**: Instantly remuxes container-compatible files (e.g. H.264 in `.mov` → `.mp4`) without re-encoding to preserve 100% original quality.
-- ⚙️ **Persistent Config**: Use `mooper config` to open a visual editor for default qualities, frame rates, and overwrite policies.
-- 📊 **Live Progress**: Granular, real-time `tqdm` progress bars for every frame and audio packet.
+- **Interactive UI**: Just point it at a file or folder. Mooper detects the media type and provides a beautiful interactive menu for conversion targets.
+- **Intelligent Batch Processing**: Point it at a folder to automatically categorize, group, and convert mixed media files into organized subfolders.
+- **Mobile VFR Support**: Advanced two-pass video engine specifically handles Variable Frame Rate (VFR) iPhone and Android footage without green frames or audio desync.
+- **Remux-First**: Instantly remuxes container-compatible files (e.g. H.264 in `.mov` → `.mp4`) without re-encoding to preserve 100% original quality.
+- **Persistent Config**: Use `mooper config` to open a visual editor for default qualities, frame rates, and overwrite policies.
+- **Live Progress**: Granular, real-time `tqdm` progress bars for every frame and audio packet.
 
-## 📦 Installation
+## Installation
 
 Mooper requires Python 3.8 or newer. Install it globally via `pip`:
 
@@ -35,7 +35,7 @@ Mooper requires Python 3.8 or newer. Install it globally via `pip`:
 pip install mooper
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Interactive Conversion
 The easiest way to use Mooper is to simply point it at a file. It will detect the format and ask you what to do.
@@ -87,7 +87,7 @@ mooper video.mp4 thumbnail.jpg --frame 150
 mooper ./folder_of_frames output_video.mp4 --fps 30
 ```
 
-## 💻 CLI Commands Reference
+## CLI Commands Reference
 
 Mooper can be run without any arguments to see the interactive landing screen, or run with arguments for precise control.
 
@@ -126,12 +126,12 @@ Mooper saves your preferences persistently to `~/.mooper_config.json`.
 - `recursive_batch` (`yes`, `no`) — determines if batch processing looks inside subfolders.
 - `overwrite_policy` (`ask`, `overwrite`, `skip`)
 
-## 💽 Supported Formats
+## Supported Formats
 
 - **Video:** `.mp4`, `.mov`, `.mkv`, `.avi`, `.webm`, `.flv`, `.wmv`, `.ts`, `.ogv`
 - **Audio:** `.mp3`, `.aac`, `.wav`, `.flac`, `.ogg`, `.m4a`
 - **Images:** `.png`, `.jpg`, `.jpeg`, `.webp`, `.bmp`, `.gif`, `.tiff`, `.ico`
 
-## 📄 License
+## License
 
 MIT License. See [LICENSE](LICENSE) for details.
