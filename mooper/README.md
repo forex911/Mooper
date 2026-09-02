@@ -85,16 +85,44 @@ mooper video.mp4 thumbnail.jpg --frame 150
 mooper ./folder_of_frames output_video.mp4 --fps 30
 ```
 
-## ⚙️ Configuration & Options
+## 💻 CLI Commands Reference
 
-Access the visual settings editor anytime:
+Mooper can be run without any arguments to see the interactive landing screen, or run with arguments for precise control.
+
 ```bash
-mooper config
+mooper [input] [output] [options]
 ```
 
-Or set flags per-conversion:
-- `--quality high`: Overrides the default quality (options: `low`, `mid`, `high`).
-- `--low-resource`: Enables single-threaded, ultrafast encoding presets for constrained hardware (like Raspberry Pi).
+### Arguments
+
+| Argument / Flag | Description |
+|----------------|-------------|
+| `input` | Path to input file or directory |
+| `output` | Path to output file or directory (optional — triggers interactive mode if omitted) |
+| `--quality [low\|mid\|high]` | Override quality for this specific conversion |
+| `--low-resource` | Use lightweight encoding settings (single-threaded, ultrafast preset) |
+| `--frame N` | Extract frame number N (only applies when converting video → image) |
+| `--fps N` | Set framerate for image sequence encoding (default: 24) |
+| `--format .ext` | Target extension for explicit CLI-driven batch conversion |
+
+### Configuration Commands
+
+Mooper saves your preferences persistently to `~/.mooper_config.json`.
+
+| Command | Description |
+|---------|-------------|
+| `mooper` | Show the landing screen containing your current global settings. |
+| `mooper config` | Open the full **Interactive Settings Editor** to visually change defaults. |
+| `mooper config set <key> <value>` | Scriptable command to update a setting directly (e.g. `mooper config set quality high`). |
+
+**Available Config Keys:**
+- `quality` (`low`, `mid`, `high`)
+- `low_resource` (`on`, `off`)
+- `default_video_format` (e.g., `mp4`)
+- `default_image_format` (e.g., `png`)
+- `default_fps` (e.g., `30`)
+- `recursive_batch` (`yes`, `no`) — determines if batch processing looks inside subfolders.
+- `overwrite_policy` (`ask`, `overwrite`, `skip`)
 
 ## 💽 Supported Formats
 
