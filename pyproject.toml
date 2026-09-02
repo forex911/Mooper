@@ -8,6 +8,17 @@ version = "0.1.0"
 description = "A lightweight, low-resource-friendly file conversion utility"
 readme = "README.md"
 requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+  {name = "forex911"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Video :: Conversion",
+    "Topic :: Multimedia :: Sound/Audio :: Conversion",
+]
 dependencies = [
     "pillow",
     "av",
@@ -23,3 +34,6 @@ dev = [
 
 [project.scripts]
 mooper = "mooper.cli:main"
+
+[tool.setuptools.package-data]
+mooper = ["README.md"]
