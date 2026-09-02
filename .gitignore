@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mooper config (user-specific)
+.mooper_config.json
+
+# Scratch / debug files
+diagnose.py
+test_timestamps.py
+test_mux.mp4
+test.png
+
+# Egg info from old package name
+fileconvert.egg-info/
+fileconvert/
