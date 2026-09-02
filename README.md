@@ -1,4 +1,6 @@
-<h1 align="center">Mooper</h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/forex911/Mooper/main/logo.png" alt="Mooper Logo" width="450">
+</p>
 
 <p align="center">
   <strong>A lightning-fast, interactive command-line media conversion tool built in pure Python.</strong>
